@@ -30,7 +30,7 @@
   filter: blur(120px);
 }
 
-.glow-indigo {
-  background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, rgba(79, 70, 229, 0) 70%);
+.glow-accent {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0) 70%);
   filter: blur(100px);
 }

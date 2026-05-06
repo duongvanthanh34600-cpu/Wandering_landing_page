@@ -31,7 +31,7 @@ export function Hero({ heroImage }: { heroImage: string }) {
     <section id="home" className="relative min-h-screen flex flex-col pt-20 overflow-hidden">
       {/* Glow Effects */}
       <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] glow-blue pointer-events-none z-0" />
-      <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] glow-indigo pointer-events-none z-0" />
+      <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] glow-accent pointer-events-none z-0" />
 
       <div className="flex-1 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center py-12 z-10">
         <motion.div 
