@@ -7,7 +7,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 overflow-hidden rounded-xl flex items-center justify-center">
-            <img src="/10.png" className="w-full h-full object-cover" alt="Logo" />
+            <img src="/pic10.png" className="w-full h-full object-cover" alt="Logo" />
           </div>
           <span className="text-xl font-bold tracking-tight">WANDERING</span>
         </div>
@@ -31,7 +31,7 @@ export function Hero({ heroImage }: { heroImage: string }) {
     <section id="home" className="relative min-h-screen flex flex-col pt-20 overflow-hidden">
       {/* Glow Effects */}
       <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] glow-blue pointer-events-none z-0" />
-      <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] glow-accent pointer-events-none z-0" />
+      <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] glow-indigo pointer-events-none z-0" />
 
       <div className="flex-1 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center py-12 z-10">
         <motion.div 
@@ -234,19 +234,19 @@ export function CoreFeatures() {
       step: "01",
       title: "Explore the 3D Globe",
       desc: "Spin the globe to discover glowing cities, or simply search for your destination.",
-      img: "/pic4.jpg"
+      img: "/pic7_1.jpg"
     },
     {
       step: "02",
       title: "Quick Previews",
       desc: "Tap any spot for an instant preview card showing the city's name, a short intro, and a photo.",
-      img: "/pic5.jpg"
+      img: "/pic8_1.jpg"
     },
     {
       step: "03",
       title: "Dive into Details",
       desc: "Click 'View Details' to explore top experiences, local food, stays, and community posts.",
-      img: "/pic9.jpg"
+      img: "/pic9_2.jpg"
     }
   ];
 
@@ -295,9 +295,76 @@ export function CoreFeatures() {
   );
 }
 
+export function PlanningFeature() {
+  const planningSteps = [
+    {
+      step: "01",
+      title: "Start Your Journey",
+      desc: "Tap 'Start Journey' on any destination to instantly add it to your personalized Trip Checklist.",
+      img: "/pic13.png"
+    },
+    {
+      step: "02",
+      title: "Tell Us Your Travel Style",
+      desc: "Tap 'Start Planning' to set your dates, budget, and travel style, then let AI generate your itinerary.",
+      img: "/pic14.png"
+    },
+    {
+      step: "03",
+      title: "Review and Refine Your Plan",
+      desc: "Review your AI-generated checklist of flights, stays, and restaurants with costs. Easily adjust everything to fit your needs.",
+      img: "/pic15_1.jpg"
+    }
+  ];
+
+  return (
+    <section id="planning-feature" className="py-24 bg-brand-primary text-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-20">
+          <h2 className="text-xl font-mono text-brand-accent uppercase tracking-[0.2em] mb-4">Main feature:</h2>
+          <h3 className="text-4xl md:text-5xl font-bold italic font-serif">2. Travel Community</h3>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {planningSteps.map((f, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: i * 0.2 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <div className="relative rounded-[32px] overflow-hidden border border-brand-border bg-brand-secondary mb-8 shadow-xl transition-transform duration-500 group-hover:scale-[1.02]">
+                <img src={f.img} alt={f.title} className="w-full h-auto block object-contain" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+              
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent text-xs font-bold font-mono">
+                    {f.step}
+                  </span>
+                  <span className="text-xs font-bold tracking-widest text-brand-text-dim uppercase">Process</span>
+                </div>
+                <h3 className="text-2xl font-bold tracking-tight group-hover:text-brand-accent transition-colors">
+                  {f.title}
+                </h3>
+                <p className="text-brand-text-dim text-sm leading-relaxed">
+                  {f.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function EventDiscovery() {
   return (
-    <section id="event-discovery" className="py-24 bg-brand-primary text-white relative overflow-hidden">
+    <section id="event-discovery" className="py-24 bg-brand-secondary text-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-20">
           <h2 className="text-xl font-mono text-brand-accent uppercase tracking-[0.2em] mb-4">Main feature:</h2>
@@ -313,7 +380,7 @@ export function EventDiscovery() {
         >
           <div className="order-2 lg:order-1 relative">
             <div className="absolute -inset-4 bg-brand-accent/10 blur-3xl rounded-full pointer-events-none" />
-            <div className="relative rounded-[40px] overflow-hidden border border-brand-border shadow-2xl bg-brand-secondary">
+            <div className="relative rounded-[40px] overflow-hidden border border-brand-border shadow-2xl bg-brand-primary">
               <img src="/pic11.jpg" alt="Local Event Discovery" className="w-full h-auto block object-contain" />
             </div>
           </div>
@@ -340,7 +407,7 @@ export function EventDiscovery() {
 
 export function TravelCommunity() {
   return (
-    <section id="travel-community" className="py-24 bg-brand-secondary text-white relative overflow-hidden">
+    <section id="travel-community" className="py-24 bg-brand-primary text-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-20">
           <h2 className="text-xl font-mono text-brand-accent uppercase tracking-[0.2em] mb-4">Main feature:</h2>
@@ -379,7 +446,7 @@ export function TravelCommunity() {
 
           <div className="relative">
             <div className="absolute -inset-4 bg-brand-accent/5 blur-3xl rounded-full pointer-events-none" />
-            <div className="relative rounded-[40px] overflow-hidden border border-brand-border shadow-2xl bg-brand-primary">
+            <div className="relative rounded-[40px] overflow-hidden border border-brand-border shadow-2xl bg-brand-secondary">
               <img src="/pic12.jpg" alt="Travel Community" className="w-full h-auto block object-contain" />
             </div>
           </div>
