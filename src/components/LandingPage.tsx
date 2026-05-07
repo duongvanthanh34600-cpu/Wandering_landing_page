@@ -18,9 +18,13 @@ export function Navbar() {
           <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
         </div>
 
-        <button className="px-6 py-2 bg-white/5 border border-brand-border rounded-full text-sm font-semibold hover:bg-white/10 transition-all">
+        <a 
+          href="https://github.com/duongvanthanh34600-cpu/Wandering_apk/releases/download/v1.0/Wandering.apk"
+          download
+          className="px-6 py-2 bg-white/5 border border-brand-border rounded-full text-sm font-semibold hover:bg-white/10 transition-all"
+        >
           Get Started
-        </button>
+        </a>
       </div>
     </nav>
   );
@@ -55,9 +59,13 @@ export function Hero({ heroImage }: { heroImage: string }) {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button className="flex items-center justify-center gap-2 px-8 py-4 bg-brand-accent text-white rounded-xl font-bold shadow-lg shadow-brand-accent/20 hover:bg-brand-accent-hover transition-all group">
+            <a 
+              href="https://github.com/duongvanthanh34600-cpu/Wandering_apk/releases/download/v1.0/Wandering.apk"
+              download
+              className="flex items-center justify-center gap-2 px-8 py-4 bg-brand-accent text-white rounded-xl font-bold shadow-lg shadow-brand-accent/20 hover:bg-brand-accent-hover transition-all group"
+            >
               Get Wandering / Begin Your Seamless Trip <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
 
           <div className="flex items-center gap-12 pt-8 border-t border-brand-border">
